@@ -6,15 +6,19 @@ const ProductManager = require("../scripts/ProductManager")
 
 
 router.get('/', (req, res) => {
-    res.render('app', {})
     let manager = new ProductManager("./products.json")
     const products = manager.getProducts()
     products.then(product => {
         let response = JSON.parse(product)
-        res.send({ menssage: "Productos", data: response })
+        /* res.send({ menssage: "Productos", data: response }) */
+        res.render('index', { response })
     }).catch(err => {
         console.log(err)
     })
+})
+
+router.get('/realTimeProducts', (req, res) => {
+    res.render('realTimeProducts', {})
 })
 
 router.get('/:id', (req, res) => {
@@ -55,7 +59,7 @@ router.put('/:id', (req, res) => {
     let productRes = manager.updateProduct(req.params.id, req.body.title, req.body.description, req.body.price, req.body.thumbnail, req.body.code, req.body.stock, req.body.status, req.body.category)
     productRes.then(product => {
         let response = product
-        res.send({data: response,message:'Producto Actualizado' })
+        res.send({ data: response, message: 'Producto Actualizado' })
     }).catch(err => {
         console.log(err)
     })

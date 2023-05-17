@@ -1,0 +1,9 @@
+<div>
+    <h1>Productos</h1>
+    {{#each response}}
+        <div>
+            <strong>{{this.title}}</strong>
+            <p>${{this.price}}</p>
+        </div>
+    {{/each}}
+</div>

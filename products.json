@@ -108,5 +108,27 @@
     "stock": 12,
     "status": true,
     "category": "Yerba"
+  },
+  {
+    "id": 11,
+    "title": "Pure de Tomate",
+    "description": "Pure de Tomate Arcor",
+    "price": "750",
+    "thumbnail": "-",
+    "code": "159adr",
+    "stock": "51",
+    "status": "true",
+    "category": "Salsas"
+  },
+  {
+    "id": 12,
+    "title": "Fideos",
+    "description": "Fideos 500g",
+    "price": "500",
+    "thumbnail": "-",
+    "code": "adc1254",
+    "stock": "35",
+    "status": "true",
+    "category": "Pastas"
   }
 ]

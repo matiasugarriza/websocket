@@ -1,0 +1,32 @@
+<div>
+    <h1>Productos</h1>
+        <div id="productos"></div>
+    <div>
+        <h2>Agregar Producto</h2>
+        <form onsubmit="return getData()">
+            <label for="title">Título</label>
+            <input type="text" id="title">
+            <label for="description">Descripción</label>
+            <input type="text" id="description">
+            <label for="price">Precio</label>
+            <input type="text" id="price">
+            <label for="thumbnail">Imagen</label>
+            <input type="text" id="thumbnail">
+            <label for="code">Código</label>
+            <input type="text" id="code">
+            <label for="stock">Stock</label>
+            <input type="text" id="stock">
+            <label for="status">Estado</label>
+            <input type="text" id="status">
+            <label for="category">Categoria</label>
+            <input type="text" id="category">
+            <input type="submit" value="Enviar">
+        </form>
+    </div>
+    
+    
+</div>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/index.js"></script>
+
+
